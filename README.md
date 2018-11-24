@@ -2,7 +2,7 @@
 
 ## A Smart Encryption Platform that Enables Time Encryption using Ethereum Smart Contracts 
 
-### The Locketry Website 
+### The Locketry Website: https://www.locketry.com/ 
 
 #### Introduction 
 
