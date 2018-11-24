@@ -7,8 +7,10 @@ name = "pypi"
 flask = "*"
 flask-cors = "*"
 gunicorn = "*"
+flask-sslify = "*"
+python-dotenv = "==0.9.1"
 
 [dev-packages]
 
 [requires]
-python_version = "3.6"
+python_version = "3.7.1"
