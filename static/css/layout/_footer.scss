@@ -1,0 +1,64 @@
+.footer {
+    background-color: $color-primary;
+    padding: 2.5rem 0;
+    text-align: center;
+    @include atMedium {
+        padding: 6.625rem 0 7.8125rem 0;
+        text-align: left;
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto 1rem auto;
+        width: 8.333rem;
+        @include atMedium {
+            margin: 0 0 .75rem 0;
+            width: 8.875rem;
+        }
+    }
+
+    &__copy {
+        line-height: 1.667rem;
+        text-align: left;
+        display: inline-block;
+        @include atMedium {
+            line-height: 1.875rem;
+        }
+
+        a {
+            &:hover {
+                text-decoration: underline;
+                color: $color-white;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include atMedium {
+            justify-content: flex-start;
+        }
+
+        &-item {
+            transition: all .25s;
+            backface-visibility: hidden;
+            width: 1.667rem;
+            @include atMedium {
+                width: 1.875rem;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            & + & {
+                margin-left: 10px;
+                @include atMedium {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}

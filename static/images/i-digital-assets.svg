@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="30px" viewBox="0 0 37 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Coming-Soon-Page" transform="translate(-704.000000, -1074.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="digitalbox" transform="translate(695.000000, 1059.000000)">
+                <g id="digitalasset">
+                    <g id="Outline" transform="translate(9.000000, 15.000000)">
+                        <g id="Group">
+                            <polygon id="Shape" points="13.3333333 6.66666667 13.3333333 20 25 13.3333333"></polygon>
+                            <path d="M33.3333333,0 L3.33333333,0 C1.5,0 0,1.5 0,3.33333333 L0,23.3333333 C0,25.1666667 1.5,26.6666667 3.33333333,26.6666667 L11.6666667,26.6666667 L11.6666667,30 L15.9609375,30 L25,30 L25,26.6666667 L33.3333333,26.6666667 C35.1666667,26.6666667 36.6666667,25.1666667 36.6666667,23.3333333 L36.6666667,3.33333333 C36.6666667,1.5 35.1666667,0 33.3333333,0 Z M33.3333333,23.3333333 L3.33333333,23.3333333 L3.33333333,3.33333333 L33.3333333,3.33333333 L33.3333333,23.3333333 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

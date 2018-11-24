@@ -1,0 +1,67 @@
+.how {
+    padding: 3.167rem 0 3.9167rem 0;
+    background-color: $color-primary;
+    text-align: center;
+    @include atMedium {
+        padding: 5.375rem 0 2.625rem 0;
+    }
+
+    &__intro {
+        margin-bottom: 2.5rem;
+        @include atMedium {
+            margin-bottom: 8.125rem;
+        }
+    }
+
+    &__step-wrapper {
+        & + & {
+            position: relative;
+            margin-top: 2.5rem;
+            @include atMedium {
+                margin-top: 0;
+            }
+
+            &:before {
+                content: "";
+                display: none;
+                @include atMedium {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translate(-50%, -125%);
+                    width: 85%;
+                    height: 3.5rem;
+                    background-image: url("../images/steps-arrow.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    pointer-events: none;
+                }
+                @include atExtralarge {
+                    height: 23%;
+                    width: 100%;
+                    transform: translate(-50%, -110%);
+                }
+            }
+        }
+    }
+
+    &__step {
+        &-title {
+            margin: 1.5rem auto;
+            @include atMedium {
+                margin: 1.25rem auto;
+            }
+        }
+
+        &-text {
+            line-height: 1.667rem;
+            @include atMedium {
+                line-height: 1.5625rem;
+                max-width: 16.25rem;
+                margin: 0 auto;
+            }
+        }
+    }
+}

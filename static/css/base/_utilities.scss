@@ -1,0 +1,72 @@
+// Alignment
+.u-align {
+    &-inline {
+        &-center {
+            text-align: center;
+        }
+    }
+}
+
+
+// Margin
+.u-margin {
+    &-bottom {
+        &-smallest {
+            margin-bottom: 7px;
+        }
+
+        &-small {
+            margin-bottom: 1rem;
+            @include atMedium {
+                margin-bottom: 1.1875rem;
+            }
+        }
+    }
+
+    &-md {
+        @include atMedium {
+            &-bottom {
+                &-null {
+                    margin-bottom: 0;
+                }
+
+                &-smallest {
+                    margin-bottom: 7px;
+                }
+                
+                &-small {
+                    &-2 {
+                        margin-bottom: 1.667rem;
+                        @include atMedium {
+                            margin-bottom: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Color
+.u-color {
+    &-white {
+        color: $color-white;
+    }
+}
+
+
+// Font family
+.u-font {
+    &-alt {
+        font-family: $font-alt;
+    }
+}
+
+
+// Font weight
+.u-weight {
+    &-reg {
+        font-weight: 400;
+    }
+}

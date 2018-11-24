@@ -1,0 +1,23 @@
+.btn {
+    height: 3.167rem;
+    background-color: $color-secondary;
+    padding: 0 1.25rem;
+    font-family: $font-main;
+    color: $color-gray;
+    font-weight: 800;
+    line-height: 1.333rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all .25s;
+    cursor: pointer;
+    @include atMedium {
+        height: 3.125rem;
+        padding: 0 1.875rem;
+        font-size: 1.125rem;
+        line-height: 1.5625rem;
+    }
+
+    &:hover {
+        background-color: darken($color-secondary, 5%);
+    }
+}

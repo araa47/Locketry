@@ -1,0 +1,5 @@
+.container {
+    @include atExtralarge {
+        max-width: 992px;
+    }
+}

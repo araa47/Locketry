@@ -1,0 +1,250 @@
+.header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    transition: all .25s;
+    @include atMedium {
+        padding: 2.1875rem 0;
+    }
+
+    &__content {
+        @include atMedium {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 10px;
+        @include atMedium {
+            margin-bottom: 0;
+        }
+
+        &-wrapper {
+            display: block;
+            width: 8.333rem;
+            @include atMedium {
+                width: 8.875rem;
+            }
+
+            &-img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include atMedium {
+            justify-content: flex-end;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &-item {
+            font-family: $font-main;
+            font-size: 2.75vw;
+            line-height: 1.167rem;
+            color: $color-white;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            @include atSmall {
+                font-size: 2vw;
+            }
+            @include atMedium {
+                font-size: 1rem;
+                line-height: 1.375rem;
+            }
+
+            &-label {
+                position: relative;
+                z-index: 1;
+                transition: all .25s;
+            }
+
+            &-caret {
+                transition: all .25s;
+                margin-left: 4px;
+                position: relative;
+                z-index: 1;
+                @include atMedium {
+                    margin-left: .5rem;
+                }
+                @include atLarge {
+                    margin-left: .75rem;
+                }
+            }
+
+            &:hover {
+                .header__menu-item {
+                    &-caret {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .header__dropdown {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+            
+            & + & {
+                margin-left: 10px;
+                @include atMedium {
+                    margin-left: 1rem;
+                }
+                @include atLarge {
+                    margin-left: 1.875rem;
+                }
+            }
+
+            &--dropdown {
+                &:hover {
+                    .header__menu-item {
+                        &-label {
+                            color: $color-black;
+                        }
+                    }
+
+                    .dropdown {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+    
+                    &:before {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: -1.333rem;
+                    left: -1.667rem;
+                    width: calc(100% + 3.333rem);
+                    height: 7.75rem;
+                    background-color: $color-gray-lgt;
+                    border-radius: 2px;
+                    box-shadow: 0 0 2px 0 rgba($color-black, .12), 0 2px 2px 0 rgba($color-black, .24);
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all .25s;
+                    @include atMedium {
+                        top: -1rem;
+                        left: -1.25rem;
+                        width: 11.4375rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        padding-top: 3.125rem;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .25s;
+        
+        &-item {
+            font-family: $font-main;
+            font-size: 2.75vw;
+            line-height: 1.167rem;
+            color: $color-black;
+            font-weight: 800;
+            cursor: pointer;
+            width: 100%;
+            @include atSmall {
+                font-size: 2vw;
+            }
+            @include atMedium {
+                font-size: 1rem;
+                line-height: 1.375rem;
+            }
+        }
+
+        &-link {
+            display: block;
+            width: 100%;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -1.667rem;
+                transform: translateY(-50%);
+                background-color: $color-gray-lgt-2;
+                height: calc(100% + 1rem);
+                width: calc(100% + 3.333rem);
+                transition: all .25s;
+                opacity: 0;
+                @include atMedium {
+                    left: -1.25rem;
+                    width: 11.4375rem;
+                }
+            }
+
+            &:hover {
+                color: $color-black;
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-label {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__title {
+        font-family: $font-main;
+        color: $color-white;
+        font-size: 4.5vw;
+        font-weight: 800;
+        line-height: 1.5833;
+        margin-left: 1rem;
+        @include atSmall {
+            font-size: 4vw;
+        }
+        @include atMedium {
+            font-size: 2rem;
+            line-height: 2.75rem;
+            margin-left: 1.75rem;
+        }
+        @include atLarge {
+            margin-left: 2.3125rem;
+        }
+    }
+
+    &--scrolled {
+        background-color: $color-primary;
+        box-shadow: -2px 2px 4px 0 rgba($color-black, .5), inset 0 1px 3px 0 rgba($color-black, .5);
+        @include atMedium {
+            padding: 1rem 0;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.cases {
+    padding: 2.5rem 0 3.333rem 0;
+    @include atMedium {
+        padding: 5.625rem 0;
+    }
+
+    &__intro {
+        margin-bottom: 2.083rem;
+        @include atMedium {
+            margin-bottom: 4.0625rem;
+        }
+    }
+
+    &__list {
+        margin-bottom: -1.667rem;
+        @include atMedium {
+            margin-bottom: -1.625rem;
+        }
+    }
+
+    &__item-wrapper {
+        padding: 1.8335rem 15px 1.667rem 15px;
+        @include atMedium {
+            padding: 1.71875rem 0 1.625rem 0;
+            height: 100%;
+        }
+    }
+
+    &__item {
+        border: 1px solid $color-gray-drk;
+        background-color: $color-white;
+        box-shadow: -2px 2px 4px 0 rgba($color-black, .5), inset 0 1px 3px 0 rgba($color-black, .5);
+        min-height: 11.667rem;
+        border-radius: 6px;
+        padding: 1rem 1.333rem 2.083rem 3.333rem;
+        position: relative;
+        @include atMedium {
+            min-height: 0;
+            height: 100%;
+            border-radius: 8px;
+            padding: .9375rem 1.5625rem 1.875rem 3.125rem;
+        }
+
+        &-icon {
+            height: 3.667rem;
+            width: 3.667rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-30%, -50%);
+            @include atMedium {
+                height: 3.4375rem;
+                width: 3.4375rem;
+            }
+
+            &-img {
+                width: 70%;
+                max-height: 65%;
+            }
+        }
+    }
+}

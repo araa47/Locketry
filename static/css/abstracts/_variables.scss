@@ -1,0 +1,28 @@
+// Colors
+$color-primary: #448AFF;
+$color-secondary: #F3EC1B;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-gray: #75849A;
+$color-gray-drk: #979797;
+$color-gray-lgt: #FAFAFA;
+$color-gray-lgt-2: #EEEEEE;
+
+
+// Typography
+@font-face {
+    font-family: "Avenir";
+    src: url("../fonts/Avenir-Heavy.ttf");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url("../fonts/Avenir-Book.ttf");
+    font-weight: 400;
+}
+
+$font-main: "Avenir", "Helvetica", "Arial", sans-serif;
+$font-alt: "Arial", sans-serif;

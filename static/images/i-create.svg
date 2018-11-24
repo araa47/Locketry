@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="53px" viewBox="0 0 46 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Coming-Soon-Page" transform="translate(-163.000000, -1895.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="outline-timer-24px" transform="translate(156.000000, 1893.000000)">
+                <g id="Outline" transform="translate(7.500000, 2.500000)">
+                    <path d="M30.175,0.025 L15.175,0.025 L15.175,5.025 L30.175,5.025 L30.175,0.025 Z M20.175,32.525 L25.175,32.525 L25.175,17.525 L20.175,17.525 L20.175,32.525 Z M40.25,15.975 L43.8,12.425 C42.725,11.15 41.55,9.95 40.275,8.9 L36.725,12.45 C32.85,9.35 27.975,7.5 22.675,7.5 C10.25,7.5 0.175,17.575 0.175,30 C0.175,42.425 10.225,52.5 22.675,52.5 C35.125,52.5 45.175,42.425 45.175,30 C45.175,24.725 43.325,19.85 40.25,15.975 Z M22.675,47.525 C13,47.525 5.175,39.7 5.175,30.025 C5.175,20.35 13,12.525 22.675,12.525 C32.35,12.525 40.175,20.35 40.175,30.025 C40.175,39.7 32.35,47.525 22.675,47.525 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

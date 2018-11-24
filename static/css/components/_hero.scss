@@ -1,0 +1,77 @@
+.hero {
+    background-color: $color-primary;
+    padding: 9rem 0 4.167rem 0;
+    @include atMedium {
+        padding: 20.625rem 0 7.5rem 0;
+    }
+
+    &__copy {
+        @include atMedium {
+            max-width: 28.125rem;
+        }
+    }
+
+    &__cta {
+        margin-top: 2.083rem;
+        @include atMedium {
+            margin-top: 1.5625rem;
+        }
+
+        &-form {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            margin-bottom: 7px;
+            @include atMedium {
+                margin-bottom: 5px;
+            }
+
+            &-input {
+                height: 3.167rem;
+                padding: 0 10px;
+                border-radius: 8px;
+                background-color: $color-white;
+                border: 1px solid $color-gray-drk;
+                font-family: $font-main;
+                color: $color-gray;
+                font-weight: 800;
+                line-height: 1.333rem;
+                font-size: 1rem;
+                transition: all .25s;
+                display: block;
+                flex: 1;
+                @include atMedium {
+                    height: 3.125rem;
+                    padding: 0 1.25rem;
+                    font-size: 1.125rem;
+                    line-height: 1.5625rem;
+                }
+
+                &::placeholder {
+                    color: $color-gray;
+                }
+
+                &:focus {
+                    border-color: $color-secondary;
+                }
+            }
+
+            &-btn {
+                margin-left: 10px;
+                @include atMedium {
+                    margin-left: .875rem;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        margin-top: 3.083rem;
+        @include atMedium {
+            max-width: 26.375rem;
+            display: block;
+            margin: 0 0 0 auto;
+        }
+    }
+}

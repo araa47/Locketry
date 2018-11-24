@@ -1,0 +1,80 @@
+html,
+body {
+    overflow-x: hidden;
+    font-size: 12px;
+    @include atSmall {
+        font-size: 14px;
+    }
+    @include atMedium {
+        font-size: 15px;
+    }
+    @include atLarge {
+        font-size: 16px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @extend .heading-primary;
+}
+
+h2 {
+    @extend .heading-secondary;
+}
+
+h3 {
+    @extend .heading-tertiary;
+}
+
+p {
+    @extend .paragraph;
+}
+
+a {
+    transition: all .25s;
+    @include linkStates(inherit, none);
+
+    &:hover {
+        color: $color-primary;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+input,
+button,
+select {
+    border: none;
+
+    &:focus {
+        outline: none !important;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

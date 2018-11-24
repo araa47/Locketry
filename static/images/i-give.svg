@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="55px" viewBox="0 0 60 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Coming-Soon-Page" transform="translate(-811.000000, -1893.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="outline-favorite_border-24px" transform="translate(811.000000, 1893.000000)">
+                <g id="Outline">
+                    <path d="M43.5,0 C38.28,0 33.27,2.43 30,6.27 C26.73,2.43 21.72,0 16.5,0 C7.26,0 0,7.26 0,16.5 C0,27.84 10.2,37.08 25.65,51.12 L30,55.05 L34.35,51.09 C49.8,37.08 60,27.84 60,16.5 C60,7.26 52.74,0 43.5,0 Z M30.3,46.65 L30,46.95 L29.7,46.65 C15.42,33.72 6,25.17 6,16.5 C6,10.5 10.5,6 16.5,6 C21.12,6 25.62,8.97 27.21,13.08 L32.82,13.08 C34.38,8.97 38.88,6 43.5,6 C49.5,6 54,10.5 54,16.5 C54,25.17 44.58,33.72 30.3,46.65 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

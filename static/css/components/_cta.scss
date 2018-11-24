@@ -1,0 +1,17 @@
+.cta {
+    padding: 3.083rem 0 2.5rem 0;
+    text-align: center;
+    @include atMedium {
+        padding: 6.4375rem 0 5.8125rem 0;
+    }
+
+    &__logo {
+        display: block;
+        margin: 1.667rem auto 0 auto;
+        width: 11.667rem;
+        @include atMedium {
+            width: 11.375rem;
+            margin-top: 1.375rem;
+        }
+    }
+}

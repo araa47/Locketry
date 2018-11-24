@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="31px" viewBox="0 0 24 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Coming-Soon-Page" transform="translate(-374.000000, -1071.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="willbox" transform="translate(359.000000, 1059.000000)">
+                <g id="will">
+                    <g id="Outline" transform="translate(15.000000, 12.666667)">
+                        <path d="M21,0 L3,0 C1.35,0 0,1.35 0,3 L0,27 C0,28.65 1.35,30 3,30 L21,30 C22.65,30 24,28.65 24,27 L24,3 C24,1.35 22.65,0 21,0 Z M7.5,3 L10.5,3 L10.5,10.5 L9,9.375 L7.5,10.5 L7.5,3 Z M21,27 L3,27 L3,3 L4.5,3 L4.5,16.5 L9,13.125 L13.5,16.5 L13.5,3 L21,3 L21,27 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
