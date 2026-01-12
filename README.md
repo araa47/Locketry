@@ -1,63 +1,119 @@
-# Locketry 
+# Locketry
 
-## A Smart Encryption Platform that Enables Time Encryption using Ethereum Smart Contracts 
+> A Locket For Your Loved Ones
 
-### The Locketry Website: https://www.locketry.com/ 
+Time-locked encryption for your most precious digital assets. Share private keys, wills, and memories with loved ones, secured by Ethereum smart contracts.
 
-#### Introduction 
+**Live Demo**: https://locketry.pages.dev
 
-The folling repo contains the locketry website souce code 
+## Features
 
-#### Website 
+- **Time-Locked Encryption** - Assets unlock only when your smart contract allows
+- **End-to-End Encrypted** - Military-grade AES-256 encryption
+- **Zero-Knowledge Architecture** - We never see your data
+- **Dead Man's Switch** - Automatic release if you go silent
+- **Beautiful Modern UI** - Glassmorphism design with dark mode
 
-The website contents can be found under the "templates" and "static" directories. 
+## Tech Stack
 
-#### Server 
+| Layer | Technology |
+|-------|------------|
+| Runtime | [Bun](https://bun.sh) |
+| Framework | [React 19](https://react.dev) |
+| Build | [Vite 6](https://vitejs.dev) |
+| Language | [TypeScript](https://typescriptlang.org) |
+| Styling | [Tailwind CSS v4](https://tailwindcss.com) |
+| Routing | [TanStack Router](https://tanstack.com/router) |
+| Data | [TanStack Query](https://tanstack.com/query) |
+| Components | Custom (shadcn/ui inspired) |
+| Hosting | [Cloudflare Pages](https://pages.cloudflare.com) |
 
-Python flask is used as the server to serve the website contents in the development environment.
+## Quick Start
 
-In the production environment gunicorn is used.
+```bash
+# Clone the repository
+git clone https://github.com/araa47/locketry.git
+cd locketry
 
-#### Installation 
+# Install dependencies
+bun install
 
-1) Clone the project by running 
+# Start development server
+bun dev
 
-```
-git clone https://github.com/araa47/Locketry.git
-```
-2) move into the project directory 
+# Build for production
+bun run build
 
-```
-cd Locketry 
-```
-
-3) Install python3 on your platform of choice and then install pipenv by following the instructions below
-
-Pipenv: https://github.com/pypa/pipenv
-
-
-4) Enable pipenv by typing in the following command ``` pipenv shell ``` 
-
-5) Install all the dependcies for the project by typing the following command ```pipenv install``` 
-
-6) Create a configuration file by copying ".env.example" file as ".env"
-
-```
-cp .env.example .env
-```
-7) Set the neccesary configs in the .env file. You may need to disable and re-enable pipenv to make sure your new configs are used. You can do this by running the following command after setting the config 
-```
-exit
-pipenv shell 
-```
-8) You can run the project locally in your development environment by running the following command
-```
-python3 app.py 
+# Preview production build
+bun run preview
 ```
 
+## Project Structure
 
-#### File Information 
+```
+locketry/
+├── src/
+│   ├── components/     # React components
+│   │   ├── ui/        # Reusable UI primitives
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── UseCases.tsx
+│   │   ├── HowItWorks.tsx
+│   │   ├── Security.tsx
+│   │   ├── CTA.tsx
+│   │   └── Footer.tsx
+│   ├── routes/        # TanStack Router file-based routes
+│   ├── lib/           # Utilities
+│   ├── index.css      # Tailwind + custom styles
+│   └── main.tsx       # App entry point
+├── public/            # Static assets
+├── ANALYSIS.md        # Original codebase analysis
+├── COMPETITION.md     # Competitor analysis
+└── DEPLOYMENT.md      # Deployment guide
+```
 
-```runtime.txt```: has information of python version to use for Heroku 
+## Design System
 
-```Procfile```: file used by gunicorn for config 
+### Colors
+- **Background**: Deep space (#0f0f23)
+- **Primary**: Vibrant purple (#8b5cf6)
+- **Accent**: Warm gold (#f59e0b)
+- **Gradients**: Purple → Pink → Gold
+
+### Typography
+- **Display**: Space Grotesk (headings)
+- **Body**: Inter (everything else)
+
+### Effects
+- Glassmorphism cards
+- Gradient text
+- Floating animations
+- Glow effects
+
+## Deployment
+
+Deploy to Cloudflare Pages:
+
+```bash
+bun run build
+bunx wrangler pages deploy dist --project-name=locketry
+```
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for full deployment guide.
+
+## Documentation
+
+- [ANALYSIS.md](./ANALYSIS.md) - Analysis of the original Flask codebase
+- [COMPETITION.md](./COMPETITION.md) - Competitor research and opportunities
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Deployment and hosting guide
+
+## Use Cases
+
+1. **Private Keys** - Backup cryptocurrency keys for family access
+2. **Digital Wills** - Time-locked documents revealed when needed
+3. **Precious Memories** - Time capsules for future generations
+4. **Dead Man's Switch** - Automatic release to trusted parties
+
+## License
+
+MIT
