@@ -1,4 +1,4 @@
-import { Lock, Github, Twitter } from 'lucide-react'
+import { Heart, Github, Twitter } from 'lucide-react'
 
 const footerLinks = {
   product: [
@@ -22,26 +22,26 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card/50">
-      <div className="container mx-auto px-4 py-12 md:py-16">
+    <footer className="border-t border-border bg-card/30">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary via-pink-500 to-accent flex items-center justify-center">
-                <Lock className="w-5 h-5 text-white" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-cyan-500 flex items-center justify-center">
+                <Heart className="w-5 h-5 text-white fill-accent" />
               </div>
               <span className="font-display text-xl font-bold">Locketry</span>
             </div>
-            <p className="text-sm text-muted-foreground mb-4 max-w-xs">
+            <p className="text-sm text-muted-foreground mb-6 max-w-xs leading-relaxed">
               Time-locked encryption for your most precious digital assets. Secured by Ethereum smart contracts.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-secondary/80 transition-colors"
+                className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary/10 hover:text-primary transition-colors"
               >
                 <Twitter className="w-5 h-5" />
               </a>
@@ -49,7 +49,7 @@ export function Footer() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-secondary/80 transition-colors"
+                className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary/10 hover:text-primary transition-colors"
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -64,7 +64,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
@@ -81,7 +81,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
@@ -98,7 +98,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
@@ -115,7 +115,7 @@ export function Footer() {
           </p>
           <p className="text-sm text-muted-foreground">
             Built with{' '}
-            <span className="text-pink-500">&#9829;</span>
+            <Heart className="w-4 h-4 inline text-accent fill-accent" />
             {' '}for your loved ones
           </p>
         </div>

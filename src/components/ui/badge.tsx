@@ -15,7 +15,7 @@ const badgeVariants = cva(
           "border-transparent bg-destructive text-destructive-foreground shadow",
         outline: "text-foreground",
         gradient:
-          "border-transparent bg-gradient-to-r from-primary via-pink-500 to-accent text-white shadow",
+          "border-transparent bg-gradient-to-r from-primary to-cyan-500 text-white shadow",
       },
     },
     defaultVariants: {

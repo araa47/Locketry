@@ -1,43 +1,47 @@
 @import "tailwindcss";
 
-@theme {
-  /* Color palette - Deep space with warm accents */
-  --color-background: #0f0f23;
-  --color-foreground: #fafafa;
-  --color-card: #1a1a2e;
-  --color-card-foreground: #fafafa;
-  --color-popover: #1a1a2e;
-  --color-popover-foreground: #fafafa;
+/* ============================================
+   LOCKETRY - FRESH TEAL/CORAL DESIGN SYSTEM
+   ============================================ */
 
-  /* Primary - Vibrant gradient purple/pink */
-  --color-primary: #8b5cf6;
-  --color-primary-foreground: #fafafa;
+@theme {
+  /* DARK MODE (default) - Ocean depths */
+  --color-background: #0a0f14;
+  --color-foreground: #f0f4f8;
+  --color-card: #111921;
+  --color-card-foreground: #f0f4f8;
+  --color-popover: #111921;
+  --color-popover-foreground: #f0f4f8;
+
+  /* Primary - Fresh Teal */
+  --color-primary: #00d4aa;
+  --color-primary-foreground: #0a0f14;
 
   /* Secondary */
-  --color-secondary: #1e1e3f;
-  --color-secondary-foreground: #fafafa;
+  --color-secondary: #1a252f;
+  --color-secondary-foreground: #f0f4f8;
 
-  /* Accent - Warm gold */
-  --color-accent: #f59e0b;
-  --color-accent-foreground: #0f0f23;
+  /* Accent - Warm Coral/Rose */
+  --color-accent: #ff6b9d;
+  --color-accent-foreground: #0a0f14;
 
   /* Muted */
-  --color-muted: #27273f;
-  --color-muted-foreground: #a1a1aa;
+  --color-muted: #1e2a36;
+  --color-muted-foreground: #8899a6;
 
   /* Border & Ring */
-  --color-border: #27273f;
-  --color-input: #27273f;
-  --color-ring: #8b5cf6;
+  --color-border: #1e2a36;
+  --color-input: #1e2a36;
+  --color-ring: #00d4aa;
 
   /* Destructive */
   --color-destructive: #ef4444;
-  --color-destructive-foreground: #fafafa;
+  --color-destructive-foreground: #f0f4f8;
 
   /* Gradient stops */
-  --color-gradient-from: #8b5cf6;
-  --color-gradient-via: #ec4899;
-  --color-gradient-to: #f59e0b;
+  --color-gradient-from: #00d4aa;
+  --color-gradient-via: #0891b2;
+  --color-gradient-to: #ff6b9d;
 
   /* Border radius */
   --radius-lg: 1rem;
@@ -49,9 +53,41 @@
   --font-display: 'Space Grotesk', system-ui, sans-serif;
 }
 
-/* Base styles */
+/* ============================================
+   LIGHT MODE THEME
+   ============================================ */
+.light {
+  --color-background: #f8fafc;
+  --color-foreground: #0f172a;
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0f172a;
+  --color-primary: #0891b2;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f172a;
+  --color-accent: #e11d48;
+  --color-accent-foreground: #ffffff;
+  --color-muted: #e2e8f0;
+  --color-muted-foreground: #64748b;
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #0891b2;
+  --color-gradient-from: #0891b2;
+  --color-gradient-via: #06b6d4;
+  --color-gradient-to: #e11d48;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
 * {
   border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -60,12 +96,15 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Custom scrollbar */
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -74,14 +113,17 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-muted);
-  border-radius: 4px;
+  border-radius: 5px;
+  border: 2px solid var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-muted-foreground);
 }
 
-/* Gradient text utility */
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
 .gradient-text {
   background: linear-gradient(135deg, var(--color-gradient-from), var(--color-gradient-via), var(--color-gradient-to));
   -webkit-background-clip: text;
@@ -89,24 +131,43 @@ body {
   background-clip: text;
 }
 
-/* Glass morphism utility */
+/* ============================================
+   GLASSMORPHISM
+   ============================================ */
 .glass {
-  background: rgba(26, 26, 46, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(17, 25, 33, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Glow effects */
+.light .glass {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
 .glow-primary {
-  box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 50px rgba(0, 212, 170, 0.35);
 }
 
 .glow-accent {
-  box-shadow: 0 0 40px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 50px rgba(255, 107, 157, 0.35);
 }
 
-/* Animated gradient background */
+.light .glow-primary {
+  box-shadow: 0 0 50px rgba(8, 145, 178, 0.25);
+}
+
+.light .glow-accent {
+  box-shadow: 0 0 50px rgba(225, 29, 72, 0.25);
+}
+
+/* ============================================
+   ANIMATED GRADIENT BACKGROUND
+   ============================================ */
 @keyframes gradient-shift {
   0%, 100% {
     background-position: 0% 50%;
@@ -117,37 +178,101 @@ body {
 }
 
 .animated-gradient {
-  background: linear-gradient(-45deg, #0f0f23, #1a1a2e, #2d1b4e, #1a1a2e);
+  background: linear-gradient(-45deg, #0a0f14, #111921, #0d2836, #1a1525);
   background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
+  animation: gradient-shift 20s ease infinite;
 }
 
-/* Floating animation */
+.light .animated-gradient {
+  background: linear-gradient(-45deg, #f8fafc, #e0f2fe, #f0fdf4, #fef2f2);
+  background-size: 400% 400%;
+  animation: gradient-shift 20s ease infinite;
+}
+
+/* ============================================
+   FLOATING ANIMATION
+   ============================================ */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
-  50% {
-    transform: translateY(-10px);
+  33% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-4px) rotate(-1deg);
   }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
-/* Pulse ring animation */
+/* ============================================
+   PULSE RING ANIMATION
+   ============================================ */
 @keyframes pulse-ring {
   0% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 0.8;
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.6);
     opacity: 0;
   }
 }
 
 .pulse-ring {
-  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse-ring 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ============================================
+   SHIMMER EFFECT
+   ============================================ */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* ============================================
+   CARD HOVER EFFECTS
+   ============================================ */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.light .card-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   NOISE TEXTURE OVERLAY
+   ============================================ */
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
 }

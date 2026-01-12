@@ -1,23 +1,32 @@
-import { Lock, FileKey, Gift, Sparkles } from 'lucide-react'
+import { Lock, FileKey, Gift } from 'lucide-react'
 
 const steps = [
   {
     icon: Lock,
-    title: 'Create a Locket',
-    description: 'Deploy your personal smart contract with a timer. Keep it active with periodic check-ins. When the timer reaches zero, your assets become accessible.',
-    details: ['Set your timer duration', 'Configure beneficiaries', 'Powered by Ethereum'],
+    title: 'Create Your Locket',
+    description: 'Deploy a personal smart contract with your timer. Keep it active with periodic check-ins—when the timer reaches zero, your assets unlock.',
+    details: ['Set timer duration', 'Add beneficiaries', 'Ethereum-powered'],
+    color: 'text-primary',
+    bg: 'bg-primary/10',
+    ring: 'ring-primary/20',
   },
   {
     icon: FileKey,
     title: 'Encrypt Your Assets',
-    description: 'Add any digital assets you want to protect. Everything is encrypted with military-grade AES-256 encryption before leaving your device.',
-    details: ['End-to-end encryption', 'Local-first security', 'Zero-knowledge architecture'],
+    description: 'Add any digital assets you want to protect. Everything is encrypted with military-grade AES-256 before leaving your device.',
+    details: ['End-to-end encryption', 'Local-first security', 'Zero-knowledge'],
+    color: 'text-cyan-500',
+    bg: 'bg-cyan-500/10',
+    ring: 'ring-cyan-500/20',
   },
   {
     icon: Gift,
-    title: 'Share with Loved Ones',
-    description: 'Pass your encrypted locket to trusted recipients. They can only unlock it when your smart contract allows—giving you complete control.',
+    title: 'Share With Loved Ones',
+    description: 'Pass your encrypted locket to trusted recipients. They can only unlock it when your smart contract allows—complete control.',
     details: ['Trustless release', 'No intermediaries', 'Guaranteed delivery'],
+    color: 'text-accent',
+    bg: 'bg-accent/10',
+    ring: 'ring-accent/20',
   },
 ]
 
@@ -25,70 +34,63 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="py-24 md:py-32 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/30 to-background" />
-
-      {/* Floating elements */}
-      <div className="absolute top-1/4 left-10 w-2 h-2 bg-primary rounded-full animate-float opacity-60" />
-      <div className="absolute top-1/3 right-20 w-3 h-3 bg-pink-500 rounded-full animate-float opacity-40" style={{ animationDelay: '1s' }} />
-      <div className="absolute bottom-1/4 left-1/4 w-2 h-2 bg-accent rounded-full animate-float opacity-50" style={{ animationDelay: '2s' }} />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-2 bg-secondary/50 rounded-full px-4 py-2 mb-6">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium">Simple & Secure</span>
-          </div>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
+          <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">
             How It Works
+          </span>
+          <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
+            Three Simple Steps to{' '}
+            <span className="gradient-text">Secure Your Legacy</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Three simple steps to secure your digital legacy
-          </p>
         </div>
 
         {/* Steps */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-8">
           {steps.map((step, index) => (
             <div
               key={step.title}
-              className={`flex flex-col md:flex-row items-center gap-8 md:gap-16 mb-16 last:mb-0 ${
-                index % 2 === 1 ? 'md:flex-row-reverse' : ''
-              }`}
+              className="group relative"
             >
-              {/* Icon */}
-              <div className="relative flex-shrink-0">
-                {/* Glow ring */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-pink-500 to-accent rounded-3xl blur-2xl opacity-30" />
+              {/* Connection line */}
+              {index < steps.length - 1 && (
+                <div className="absolute left-[39px] top-[100px] w-0.5 h-[calc(100%-60px)] bg-gradient-to-b from-border to-transparent hidden md:block" />
+              )}
 
-                <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-gradient-to-br from-primary/10 to-pink-500/10 border border-primary/20 flex items-center justify-center">
-                  {/* Step number */}
-                  <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gradient-to-br from-primary to-pink-500 flex items-center justify-center text-lg font-display font-bold shadow-lg">
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                {/* Step number and icon */}
+                <div className="flex-shrink-0 relative">
+                  <div className={`w-20 h-20 rounded-3xl ${step.bg} ring-2 ${step.ring} flex items-center justify-center transition-transform duration-300 group-hover:scale-110`}>
+                    <step.icon className={`w-10 h-10 ${step.color}`} strokeWidth={1.5} />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-card border-2 border-border flex items-center justify-center text-sm font-bold">
                     {index + 1}
                   </div>
-                  <step.icon className="w-16 h-16 md:w-20 md:h-20 text-primary" strokeWidth={1.5} />
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className={`flex-1 text-center md:text-left ${index % 2 === 1 ? 'md:text-right' : ''}`}>
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  {step.description}
-                </p>
+                {/* Content */}
+                <div className="flex-1 pt-2">
+                  <h3 className="font-display text-2xl font-bold mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-5 leading-relaxed max-w-xl">
+                    {step.description}
+                  </p>
 
-                {/* Detail pills */}
-                <div className={`flex flex-wrap gap-3 justify-center ${index % 2 === 1 ? 'md:justify-end' : 'md:justify-start'}`}>
-                  {step.details.map((detail) => (
-                    <span
-                      key={detail}
-                      className="px-4 py-2 rounded-full bg-secondary/50 text-sm text-muted-foreground border border-border"
-                    >
-                      {detail}
-                    </span>
-                  ))}
+                  {/* Detail pills */}
+                  <div className="flex flex-wrap gap-2">
+                    {step.details.map((detail) => (
+                      <span
+                        key={detail}
+                        className="px-4 py-1.5 rounded-full bg-secondary text-sm text-muted-foreground border border-border"
+                      >
+                        {detail}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
